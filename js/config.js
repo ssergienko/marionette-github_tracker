@@ -2,7 +2,7 @@ var config = {
     github: {
         apiurl: "https://serverName/api/v3",
         username: "ssergienko",
-        password: "gjk.,jVe54",
+        password: "",
         auth: "basic"
     },
     marionetteRepo: {

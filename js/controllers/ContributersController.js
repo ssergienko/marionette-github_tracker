@@ -5,7 +5,7 @@ GithubApp.module("GithubApp.Contributers", function (Contributers) {
 
             var spinner = GithubApp.spinner.wait();
 
-            new Contributers.Model().fetch()
+            var contributers = new Contributers.Model().fetch()
                 .done(function (contributersList) {
                     if (contributersList && contributersList.length > 0) {
                         // invoke view here
