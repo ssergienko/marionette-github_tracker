@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+    <title>Work with gitHub API</title>
+    <link href="css/libs/bootstrap.css" rel="stylesheet" />
+    <link href="css/libs/bootstrap-theme.css" rel="stylesheet" />
+    <link href="js/widgets/spinner/spinner.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="target-densitydpi=device-dpi" />
+</head>
+<body>
+
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">BACKBONE.MARIONETTE GITHUB REPOSOTORY</a>
+    </div>
+
+    <div class="panel panel-default row">
+
+        <!----------------------- MENU ----------------------->
+        <div class="col-xs-3">
+            <ul class="nav nav-pills nav-stacked" id="menu">
+                <!-- menu content is here -->
+            </ul>
+        </div>
+
+        <!----------------------- CONTENT ----------------------->
+        <div class="col-xs-9" id="list">
+            <!-- users or forks passes here -->
+        </div>
+
+    </div>
+
+    <!----------------------- TEMPLATES ----------------------->
+    <!-- CONTRIBUTOR -->
+    <script type="text/template" id="contributors">
+        <div class="well">
+            <h3>
+                <strong>repo</strong>
+                <span class="pull-right label label-primary">100$</span>
+            </h3>
+            <span class="lead">1231231231231</span>
+        </div>
+    </script>
+    <!-- FORK -->
+    <script type="text/template" id="fork">
+        <div class="well">
+            <h3>
+                <strong>repo</strong>
+                <span class="pull-right label label-primary">100$</span>
+            </h3>
+            <span class="lead">1231231231231</span>
+        </div>
+    </script>
+
+    <!----------------------- SCRIPTS ----------------------->
+    <!-- LIBS -->
+    <script type="text/javascript" src="js/libs/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/libs/underscore-min.js"></script>
+    <script type="text/javascript" src="js/libs/backbone-min.js"></script>
+    <script type="text/javascript" src="js/libs/backbone.marionette.min.js"></script>
+    <!-- WIDGETS -->
+    <script type="text/javascript" src="js/widgets/menu/usermenu.js"></script>
+    <script type="text/javascript" src="js/widgets/spinner/spinner.js"></script>
+    <!-- APPLICATION -->
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/libs/github.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controllers/ContributersController.js"></script>
+    <script type="text/javascript" src="js/models/ContributersModel.js"></script>
+    <script type="text/javascript" src="js/views/ContributersView.js"></script>
+    <script type="text/javascript" src="js/controllers/ForksController.js"></script>
+    <script type="text/javascript" src="js/models/ForksModel.js"></script>
+    <script type="text/javascript" src="js/views/ForksView.js"></script>
+    <script type="text/javascript" src="js/controllers/GithubController.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
+
+</body>
+</html>
