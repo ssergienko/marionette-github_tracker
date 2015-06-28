@@ -5,6 +5,7 @@
     <title>Work with gitHub API</title>
     <link href="css/libs/bootstrap.css" rel="stylesheet" />
     <link href="css/libs/bootstrap-theme.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <link href="js/widgets/spinner/spinner.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="target-densitydpi=device-dpi" />
@@ -25,7 +26,7 @@
         </div>
 
         <!----------------------- CONTENT ----------------------->
-        <div class="col-xs-9" id="list">
+        <div class="col-xs-9" id="content">
             <!-- users or forks passes here -->
         </div>
 
@@ -33,23 +34,21 @@
 
     <!----------------------- TEMPLATES ----------------------->
     <!-- CONTRIBUTOR -->
-    <script type="text/template" id="contributors">
+    <script type="text/template" id="contributorTemplate">
         <div class="well">
-            <h3>
-                <strong>repo</strong>
-                <span class="pull-right label label-primary">100$</span>
-            </h3>
-            <span class="lead">1231231231231</span>
+            <div>
+                <span class="label label-primary"><%=login%></span>
+            </div>
+            <img src="<%=avatar_url%>" class="lead avatar" />
         </div>
     </script>
     <!-- FORK -->
-    <script type="text/template" id="fork">
+    <script type="text/template" id="forksTemplate">
         <div class="well">
             <h3>
-                <strong>repo</strong>
-                <span class="pull-right label label-primary">100$</span>
+                <strong><%=full_name%></strong>
             </h3>
-            <span class="lead">1231231231231</span>
+            <span class="lead"><%=description%></span>
         </div>
     </script>
 
