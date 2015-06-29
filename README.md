@@ -2,10 +2,10 @@
 
 #MVC
 
-#COFFESCRIPT
+#Coffescript
 
-#TESTS
+#Tests
 
-#LESS
+#Less/Sass
 
-#GRUNT
+#Grunt
