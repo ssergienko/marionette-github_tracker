@@ -1,11 +1,13 @@
 # Marionette github tracker
 
-#MVC
+#MarionetteMVC
 
-#Coffescript
+#RequireJS
 
-#Tests
+#CoffeScript
 
 #Less/Sass
+
+#Tests
 
 #Grunt
