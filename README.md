@@ -1,2 +1,13 @@
-# work_with_github_api
-work_with_github_api
+# Marionette github tracker
+
+#MarionetteMVC
+
+#RequireJS
+
+#CoffeScript
+
+#Less/Sass
+
+#Tests
+
+#Grunt
