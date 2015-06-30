@@ -11,7 +11,7 @@
         return this.$el.html('');
       }
     });
-    return console.log('fw111');
+    return console.log('fw');
   });
 
 }).call(this);

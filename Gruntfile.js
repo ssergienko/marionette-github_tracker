@@ -6,6 +6,7 @@ module.exports = function(grunt) {
             "options": { "separator": "; " },
             "build": {
                 "src": [
+                    'js/libs/jquery-2.1.4.min.js',
                     "js/libs/underscore-min.js",
                     "js/libs/backbone-min.js",
                     "js/libs/backbone.marionette.min.js",
@@ -37,7 +38,18 @@ module.exports = function(grunt) {
         jasmine : {
             src : 'js/**/*.js',
             options : {
-                specs : 'tests/**/*_test.js'
+                specs : 'tests/**/*_test.js',
+                helpers: [
+                    'js/widgets/menu/usermenu.js',
+                    'js/widgets/spinner/spinner.js',
+                ],
+                vendor: [
+                    'js/libs/jquery-2.1.4.min.js',
+                    'js/libs/underscore-min.js',
+                    'js/libs/backbone-min.js',
+                    'js/libs/backbone.marionette.min.js'
+                ],
+                outfile: 'unittests.html'
             }
         }
     });

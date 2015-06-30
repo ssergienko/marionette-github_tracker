@@ -24,6 +24,9 @@
       error: function(message) {
         console.log(message);
         return window.spinner.destroy();
+      },
+      test: function() {
+        return 'test';
       }
     };
   });

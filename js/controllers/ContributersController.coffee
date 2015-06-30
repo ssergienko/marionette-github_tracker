@@ -25,5 +25,5 @@ GithubApp.module "GithubApp.Contributers", (Contributers) ->
       console.log(message)
       window.spinner.destroy()
 
-    test: ->
+    test1111: ->
       return 'test'
