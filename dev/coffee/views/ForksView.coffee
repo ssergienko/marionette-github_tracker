@@ -8,6 +8,4 @@ GithubApp.module "GithubApp.Forks", (Forks) ->
     childView: Forks.ForkView
     initialize: ->
       this.$el.html('')
-
-  console.log('fw');
    

@@ -5,17 +5,28 @@ module.exports = function(grunt) {
         coffee: {
             code: {
                 expand: true,
-                cwd: 'coffee',
+                cwd: 'dev/coffee',
                 src: [ '**/*.coffee' ],
                 dest: 'js',
                 ext: '.js'
             },
             tests: {
                 expand: true,
-                cwd: 'tests/coffee',
+                cwd: 'dev/tests/coffee',
                 src: [ '**/*.coffee' ],
                 dest: 'tests/specs',
                 ext: '.js'
+            }
+        },
+        sass: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'dev/sass',
+                    src: ['*.scss'],
+                    dest: 'css',
+                    ext: '.css'
+                }]
             }
         },
         jasmine : {
@@ -45,6 +56,9 @@ module.exports = function(grunt) {
         [ 'coffee' ]
     );
 
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.registerTask('styles', 'sass');
+
     // Run jasmine tests
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.registerTask('runtests', 'jasmine');
@@ -53,7 +67,7 @@ module.exports = function(grunt) {
     grunt.registerTask(
         'build',
         'Execite all Grunts operations.',
-        [ 'compile', 'runtests' ]
+        [ 'compile', 'styles', 'runtests' ]
     );
 
 };

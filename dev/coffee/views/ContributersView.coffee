@@ -8,5 +8,3 @@ GithubApp.module "GithubApp.Contributers", (Contributers) ->
         childView: Contributers.ContributerView
         initialize: ->
           this.$el.html('')
-
-    console.log('cw');
