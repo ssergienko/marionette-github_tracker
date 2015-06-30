@@ -24,3 +24,6 @@ GithubApp.module "GithubApp.Contributers", (Contributers) ->
     error: (message) ->
       console.log(message)
       window.spinner.destroy()
+
+    test: ->
+      return 'test'
