@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         coffee: {
             code: {
+                bare: false,
                 expand: true,
                 cwd: 'dev/coffee',
                 src: [ '**/*.coffee' ],
@@ -11,10 +12,11 @@ module.exports = function(grunt) {
                 ext: '.js'
             },
             tests: {
+                bare: false,
                 expand: true,
                 cwd: 'dev/tests/coffee',
                 src: [ '**/*.coffee' ],
-                dest: 'tests/specs',
+                dest: 'dev/tests/specs',
                 ext: '.js'
             }
         },
@@ -32,7 +34,7 @@ module.exports = function(grunt) {
         jasmine : {
             src : 'js/**/*.js',
             options : {
-                specs : 'tests/**/*_test.js',
+                specs : 'dev/tests/**/*_test.js',
                 helpers: [
                     'js/widgets/menu/usermenu.js',
                     'js/widgets/spinner/spinner.js',

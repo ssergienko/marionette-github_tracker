@@ -3,12 +3,11 @@
     Contributers.ContributerView = Backbone.Marionette.ItemView.extend({
       template: "#contributorTemplate"
     });
-    return Contributers.ContributersListView = Backbone.Marionette.CollectionView.extend({
+    return Contributers.ContributersListView = Backbone.Marionette.CompositeView.extend({
       el: "#content",
+      template: "#contributorsTemplate",
       childView: Contributers.ContributerView,
-      initialize: function() {
-        return this.$el.html('');
-      }
+      childViewConteiner: "#contributers"
     });
   });
 

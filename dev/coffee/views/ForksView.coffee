@@ -1,11 +1,11 @@
 GithubApp.module "GithubApp.Forks", (Forks) ->
 
   Forks.ForkView = Backbone.Marionette.ItemView.extend
-    template: "#forksTemplate"
+    template: "#forkTemplate"
 
-  Forks.ForksListView = Backbone.Marionette.CollectionView.extend
+  Forks.ForksListView = Backbone.Marionette.CompositeView.extend
     el: "#content"
+    template: "#forksTemplate"
     childView: Forks.ForkView
-    initialize: ->
-      this.$el.html('')
+    childViewConteiner: "#listConteiner"
    

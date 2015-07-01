@@ -5,7 +5,7 @@
     <title>Work with gitHub API</title>
     <link href="css/libs/bootstrap.css" rel="stylesheet" />
     <link href="css/libs/bootstrap-theme.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
     <link href="js/widgets/spinner/spinner.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="target-densitydpi=device-dpi" />
@@ -26,7 +26,7 @@
         </div>
 
         <!----------------------- CONTENT ----------------------->
-        <div class="col-xs-9" id="content">
+        <div class="col-xs-9 container" id="content">
             <!-- users or forks passes here -->
         </div>
 
@@ -34,22 +34,35 @@
 
     <!----------------------- TEMPLATES ----------------------->
     <!-- CONTRIBUTOR -->
+    <script type="text/template" id="contributorsTemplate">
+        <h2>Backbone.Marionette Contributers</h2>
+        <div id="contributers">
+            <!-- contributers list is here -->
+        </div>
+    </script>
     <script type="text/template" id="contributorTemplate">
-        <div class="well">
+        <div class="float-left">
             <div>
                 <span class="label label-primary"><%=login%></span>
             </div>
-            <img src="<%=avatar_url%>" class="lead avatar" />
+            <a href="<%=html_url%>" title="Url to repos" target="_blank">
+                <img src="<%=avatar_url%>" class="lead avatar" alt="Url to repos" />
+            </a>
         </div>
     </script>
-    <!-- FORK -->
+
+    <!-- FORKS -->
     <script type="text/template" id="forksTemplate">
-        <div class="well">
-            <h3>
-                <strong><%=full_name%></strong>
-            </h3>
-            <span class="lead"><%=description%></span>
+        <h2>Backbone.Marionette Fork's List</h2>
+        <div class="list-group" id="listConteiner">
+            <!-- forks list is here -->
         </div>
+    </script>
+    <script type="text/template" id="forkTemplate">
+        <a href="<%=html_url%>" class="list-group-item" target="_blank">
+            <h4 class="list-group-item-heading"><%=full_name%></h4>
+            <p class="list-group-item-text"><%=description%></p>
+        </a>
     </script>
 
     <!----------------------- SCRIPTS ----------------------->
