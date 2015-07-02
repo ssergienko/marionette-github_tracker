@@ -35,6 +35,7 @@
       star: function() {
         var _that;
         _that = this;
+        window.spinner = GithubApp.spinner.wait();
         return this.forkRepo.star(this.forkUser, this.forkRepoName, function(res) {
           return _that.setStarred();
         });
@@ -42,24 +43,33 @@
       unstar: function() {
         var _that;
         _that = this;
+        window.spinner = GithubApp.spinner.wait();
         return this.forkRepo.unstar(this.forkUser, this.forkRepoName, function(res) {
           return _that.setUnstarred();
         });
       },
       setStarred: function() {
         this.$el.addClass("starred");
-        return this.model.set("starred", true);
+        this.model.set("starred", true);
+        return window.spinner.destroy();
       },
       setUnstarred: function() {
         this.$el.removeClass("starred");
-        return this.model.set("starred", false);
+        this.model.set("starred", false);
+        return window.spinner.destroy();
       }
     });
     return Forks.ForksListView = Backbone.Marionette.CompositeView.extend({
       el: "#content",
       template: "#forksTemplate",
       childView: Forks.ForkView,
-      childViewConteiner: "#listConteiner"
+      childViewConteiner: "#listConteiner",
+      initialize: function() {
+        return this.spinner = GithubApp.spinner.wait();
+      },
+      onRender: function() {
+        return this.spinner.destroy();
+      }
     });
   });
 

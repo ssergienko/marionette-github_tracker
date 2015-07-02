@@ -231,6 +231,7 @@
       var that = this;
       var repoPath = '/repos/' + user + '/' + repo;
 
+      // starring
       this.isStarred = function(owner, repo, cb) {
         _request("GET", "/user/starred/" + owner + '/' + repo, null, function(err,res) {
           cb(err,res);
