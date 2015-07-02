@@ -13,14 +13,13 @@ window.widgets.spinner = (function () {
 					clearTimeout(timeout);
 					$loader.remove();
 				});
-			} else {				
+			} else {
 				$el.append($loader);
 			}
 			return {
-				destroy: function() {
+				destroy: function () {
 					$loader.remove();
-				},
-				$el: $loader
+				}, $el: $loader
 			};
 		}
 	};

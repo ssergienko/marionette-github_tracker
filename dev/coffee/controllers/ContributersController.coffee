@@ -1,29 +1,27 @@
 GithubApp.module "GithubApp.Contributers", (Contributers) ->
+	Contributers.Controller =
 
-  Contributers.Controller =
+		showList: ->
+			window.spinner = GithubApp.spinner.wait()
+			contributers = new Contributers.ContributersModel()
+			.fetch()
+			.done (this.success)
+			.error (this.error)
 
-    showList: ->
-      window.spinner = GithubApp.spinner.wait()
-      contributers = new Contributers.ContributersModel()
-      .fetch()
-      .done (this.success)
-      .error (this.error)
+		success: (contributersList) ->
+			if contributersList && contributersList.length > 0
+# invoke view here
+				if !contributersListView
+					contributersListView = new Contributers.ContributersListView collection: new Backbone.Collection contributersList
+					contributersListView.render()
+			else
+				console.log('Couldn`t recive contributers')
 
-    success: (contributersList) ->
+			window.spinner.destroy()
 
-      if contributersList && contributersList.length > 0
-        # invoke view here
-        if !contributersListView
-          contributersListView = new Contributers.ContributersListView collection: new Backbone.Collection contributersList
-          contributersListView.render()
-      else
-        console.log('Couldn`t recive contributers')
+		error: (message) ->
+			console.log(message)
+			window.spinner.destroy()
 
-      window.spinner.destroy()
-
-    error: (message) ->
-      console.log(message)
-      window.spinner.destroy()
-
-    test: ->
-      return 'test'
+		test: ->
+			return 'test'
