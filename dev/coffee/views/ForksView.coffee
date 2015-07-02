@@ -1,13 +1,14 @@
 GithubApp.module "GithubApp.Forks", (Forks) ->
 
-  # connect to github
+# connect to github
   GithubApi = new Github
     username: config.github.username
     password: config.github.password
     auth: "basic"
 
   Forks.ForkView = Backbone.Marionette.ItemView.extend
-    events: "click #star": "starring"
+    events:
+      "click #star": "starring"
     template: "#forkTemplate",
     initialize: ->
       _that = this

@@ -1,5 +1,4 @@
 GithubApp.module "GithubApp.Contributers", (Contributers) ->
-
   Contributers.Controller =
 
     showList: ->
@@ -10,11 +9,11 @@ GithubApp.module "GithubApp.Contributers", (Contributers) ->
       .error (this.error)
 
     success: (contributersList) ->
-
       if contributersList && contributersList.length > 0
-        # invoke view here
+# invoke view here
         if !contributersListView
-          contributersListView = new Contributers.ContributersListView collection: new Backbone.Collection contributersList
+          contributersListView = new Contributers.ContributersListView
+            collection: new Backbone.Collection contributersList
           contributersListView.render()
       else
         console.log('Couldn`t recive contributers')
