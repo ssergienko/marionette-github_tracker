@@ -1,8 +1,8 @@
 # Marionette github tracker
 
-#MarionetteMVC
+This application represents a example of Marionette application
 
-#RequireJS
+#MarionetteMVC
 
 #CoffeScript
 
