@@ -1,99 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <title>Work with gitHub API</title>
-    <link href="css/libs/bootstrap.css" rel="stylesheet"/>
-    <link href="css/libs/bootstrap-theme.css" rel="stylesheet"/>
+    <link href="css/libs/bootstrap.css" rel="stylesheet" />
+    <link href="css/libs/bootstrap-theme.css" rel="stylesheet" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link href="css/main.css" rel="stylesheet"/>
-    <link href="js/widgets/spinner/spinner.css" rel="stylesheet"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="viewport" content="target-densitydpi=device-dpi"/>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="js/widgets/spinner/spinner.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="target-densitydpi=device-dpi" />
 </head>
 <body>
 
-<div class="navbar navbar-inverse">
-    <a class="navbar-brand" href="#">BACKBONE.MARIONETTE GITHUB REPOSOTORY</a>
-</div>
-
-<div class="panel panel-default row">
-
-    <!----------------------- MENU ----------------------->
-    <div class="col-xs-3">
-        <ul class="nav nav-pills nav-stacked" id="menu">
-            <!-- menu content is here -->
-        </ul>
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">BACKBONE.MARIONETTE GITHUB REPOSOTORY</a>
     </div>
 
-    <!----------------------- CONTENT ----------------------->
-    <div class="col-xs-9 container" id="content">
-        <!-- users or forks passes here -->
-    </div>
+    <div class="panel panel-default row">
 
-</div>
-
-<!----------------------- TEMPLATES ----------------------->
-<!-- CONTRIBUTOR -->
-<script type="text/template" id="contributorsTemplate">
-    <h2>Backbone.Marionette Contributers</h2>
-    <div id="contributers">
-        <!-- contributers list is here -->
-    </div>
-</script>
-<script type="text/template" id="contributorTemplate">
-    <div class="float-left">
-        <div>
-            <span class="label label-primary"><%=login%></span>
+        <!----------------------- MENU ----------------------->
+        <div class="col-xs-3">
+            <ul class="nav nav-pills nav-stacked" id="menu">
+                <!-- menu content is here -->
+            </ul>
         </div>
-        <a href="<%=html_url%>" title="Url to repos" target="_blank">
-            <img src="<%=avatar_url%>" class="lead avatar" alt="Url to repos"/>
-        </a>
-    </div>
-</script>
 
-<!-- FORKS -->
-<script type="text/template" id="forksTemplate">
-    <h2>Backbone.Marionette Fork's List</h2>
-    <div class="list-group" id="listConteiner">
-        <!-- forks list is here -->
-    </div>
-</script>
-<script type="text/template" id="forkTemplate">
-    <div class="list-group-item" target="_blank">
-        <a href="<%=html_url%>">
-            <h4 class="list-group-item-heading"><%=full_name%></h4>
-        </a>
+        <!----------------------- CONTENT ----------------------->
+        <div class="col-xs-9 container" id="content">
+            <!-- users or forks passes here -->
+        </div>
 
-        <div class="description-area">
-            <div class="list-group-item-text float-left"><%=description%></div>
+    </div>
+
+    <!----------------------- TEMPLATES ----------------------->
+    <!-- CONTRIBUTOR -->
+    <script type="text/template" id="contributorsTemplate">
+        <h2>Backbone.Marionette Contributers</h2>
+        <div id="contributers">
+            <!-- contributers list is here -->
+        </div>
+    </script>
+    <script type="text/template" id="contributorTemplate">
+        <div class="float-left">
+            <div>
+                <span class="label label-primary"><%=login%></span>
+            </div>
+            <a href="<%=html_url%>" title="Url to repos" target="_blank">
+                <img src="<%=avatar_url%>" class="lead avatar" alt="Url to repos" />
+            </a>
+        </div>
+    </script>
+
+    <!-- FORKS -->
+    <script type="text/template" id="forksTemplate">
+        <h2>Backbone.Marionette Fork's List</h2>
+        <div class="list-group" id="listConteiner">
+            <!-- forks list is here -->
+        </div>
+    </script>
+    <script type="text/template" id="forkTemplate">
+        <div class="list-group-item" target="_blank">
+            <a href="<%=html_url%>">
+                <h4 class="list-group-item-heading"><%=full_name%></h4>
+            </a>
+            <div class="description-area">
+                <div class="list-group-item-text float-left"><%=description%></div>
                 <span class="badge float-right starring">
                     <i class="fa fa-star" id="star"> Star</i>
                 </span>
+            </div>
         </div>
-    </div>
-</script>
+    </script>
 
-<!----------------------- SCRIPTS ----------------------->
-<!-- LIBS -->
-<script type="text/javascript" src="js/libs/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/libs/underscore-min.js"></script>
-<script type="text/javascript" src="js/libs/backbone-min.js"></script>
-<script type="text/javascript" src="js/libs/backbone.marionette.min.js"></script>
-<script type="text/javascript" src="js/libs/github.js"></script>
-<!-- WIDGETS -->
-<script type="text/javascript" src="js/widgets/menu/usermenu.js"></script>
-<script type="text/javascript" src="js/widgets/spinner/spinner.js"></script>
-<!-- APPLICATION -->
-<script type="text/javascript" src="js/config.js"></script>
-<script type="text/javascript" src="js/app.js"></script>
-<script type="text/javascript" src="js/models/ContributersModel.js"></script>
-<script type="text/javascript" src="js/views/ContributersView.js"></script>
-<script type="text/javascript" src="js/controllers/ContributersController.js"></script>
-<script type="text/javascript" src="js/models/ForksModel.js"></script>
-<script type="text/javascript" src="js/views/ForksView.js"></script>
-<script type="text/javascript" src="js/controllers/ForksController.js"></script>
-<script type="text/javascript" src="js/router.js"></script>
+    <!----------------------- SCRIPTS ----------------------->
+    <!-- LIBS -->
+    <script type="text/javascript" src="js/libs/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/libs/underscore-min.js"></script>
+    <script type="text/javascript" src="js/libs/backbone-min.js"></script>
+    <script type="text/javascript" src="js/libs/backbone.marionette.min.js"></script>
+    <script type="text/javascript" src="js/libs/github.js"></script>
+    <!-- WIDGETS -->
+    <script type="text/javascript" src="js/widgets/menu/usermenu.js"></script>
+    <script type="text/javascript" src="js/widgets/spinner/spinner.js"></script>
+    <!-- APPLICATION -->
+    <script type="text/javascript" src="js/config.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/models/ContributersModel.js"></script>
+    <script type="text/javascript" src="js/views/ContributersView.js"></script>
+    <script type="text/javascript" src="js/controllers/ContributersController.js"></script>
+    <script type="text/javascript" src="js/models/ForksModel.js"></script>
+    <script type="text/javascript" src="js/views/ForksView.js"></script>
+    <script type="text/javascript" src="js/controllers/ForksController.js"></script>
+    <script type="text/javascript" src="js/router.js"></script>
 
 </body>
 </html>
