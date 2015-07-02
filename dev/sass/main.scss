@@ -1,5 +1,6 @@
 $avatar_weight: 200px;
 $avatar_height: 200px;
+$description_height: 40px;
 
 .avatar {
   width: $avatar_weight;
@@ -8,4 +9,22 @@ $avatar_height: 200px;
 
 .float-left {
   float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.description-area {
+  height: $description_height;
+}
+
+.badge {
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+.starred .starring {
+  color: yellow;
 }

@@ -1,8 +1,8 @@
 window.config =
     github:
-        apiurl: "https://serverName/api/v3",
-        username: "ssergienko",
-        password: "",
+        apiurl: "https://api.github.com/",
+        username: "userforauth",
+        password: "vjhrjdRf123",
         auth: "basic"
     marionetteRepo:
         user: "marionettejs",

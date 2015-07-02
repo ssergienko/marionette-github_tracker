@@ -22,7 +22,7 @@
       XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
       _ = require('underscore');
       if (typeof btoa === 'undefined') {
-        var btoa = require('btoa'); //jshint ignore:line
+        btoa = require('btoa'); //jshint ignore:line
       }
       
   } else { 
@@ -231,11 +231,26 @@
       var that = this;
       var repoPath = '/repos/' + user + '/' + repo;
 
+      this.isStarred = function(owner, repo, cb) {
+        _request("GET", "/user/starred/" + owner + '/' + repo, null, function(err,res) {
+          cb(err,res);
+        });
+      };
+      this.star = function(owner, repo, cb) {
+        _request("PUT", "/user/starred/" + owner + '/' + repo, null, function(err,res) {
+            cb(err,res);
+        });
+      };
+      this.unstar = function(owner, repo, cb) {
+        _request("DELETE", "/user/starred/" + owner + '/' + repo, null, function(err,res) {
+            cb(err,res);
+        });
+      };
+
       var currentTree = {
         'branch': null,
         'sha': null
       };
-
 
       // Delete a repo
       // --------

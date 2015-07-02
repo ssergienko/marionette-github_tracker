@@ -5,6 +5,7 @@
     <title>Work with gitHub API</title>
     <link href="css/libs/bootstrap.css" rel="stylesheet" />
     <link href="css/libs/bootstrap-theme.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet" />
     <link href="js/widgets/spinner/spinner.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,10 +60,17 @@
         </div>
     </script>
     <script type="text/template" id="forkTemplate">
-        <a href="<%=html_url%>" class="list-group-item" target="_blank">
-            <h4 class="list-group-item-heading"><%=full_name%></h4>
-            <p class="list-group-item-text"><%=description%></p>
-        </a>
+        <div class="list-group-item" target="_blank">
+            <a href="<%=html_url%>">
+                <h4 class="list-group-item-heading"><%=full_name%></h4>
+            </a>
+            <div class="description-area">
+                <div class="list-group-item-text float-left"><%=description%></div>
+                <span class="badge float-right starring">
+                    <i class="fa fa-star" id="star"> Star</i>
+                </span>
+            </div>
+        </div>
     </script>
 
     <!----------------------- SCRIPTS ----------------------->
@@ -71,6 +79,7 @@
     <script type="text/javascript" src="js/libs/underscore-min.js"></script>
     <script type="text/javascript" src="js/libs/backbone-min.js"></script>
     <script type="text/javascript" src="js/libs/backbone.marionette.min.js"></script>
+    <script type="text/javascript" src="js/libs/github.js"></script>
     <!-- WIDGETS -->
     <script type="text/javascript" src="js/widgets/menu/usermenu.js"></script>
     <script type="text/javascript" src="js/widgets/spinner/spinner.js"></script>

@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/ssergienko/work_with_github_api#readme",
   "devDependencies": {
+    "btoa": "^1.1.2",
+    "github-api": "^0.10.6",
     "grunt": "^0.4.5",
     "grunt-contrib-coffee": "^0.13.0",
     "grunt-contrib-concat": "^0.5.1",

@@ -5,9 +5,9 @@ GithubApp.module "GithubApp.Forks", (Forks) ->
     showList: ->
       window.spinner = GithubApp.spinner.wait()
       contributers = new Forks.ForksModel()
-      .fetch()
-      .done (this.success)
-      .error (this.error)
+        .fetch()
+        .done (this.success)
+        .error (this.error)
 
     success: (forksList) ->
 

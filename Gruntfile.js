@@ -43,7 +43,8 @@ module.exports = function(grunt) {
                     'js/libs/jquery-2.1.4.min.js',
                     'js/libs/underscore-min.js',
                     'js/libs/backbone-min.js',
-                    'js/libs/backbone.marionette.min.js'
+                    'js/libs/backbone.marionette.min.js',
+                    'js/libs/github.js'
                 ],
                 outfile: 'unittests.html'
             }

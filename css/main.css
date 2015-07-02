@@ -5,4 +5,18 @@
 .float-left {
   float: left; }
 
+.float-right {
+  float: right; }
+
+.description-area {
+  height: 40px; }
+
+.badge {
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: 1.4em; }
+
+.starred .starring {
+  color: yellow; }
+
 /*# sourceMappingURL=main.css.map */
