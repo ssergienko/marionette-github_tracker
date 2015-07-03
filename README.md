@@ -42,7 +42,7 @@ Sass allow to create awesome logic constructions within the front-end applicatio
 
 I created a structure for covering the javascript logic by `Unit Tests` and simple examples of using it. Has been used `Jasmin` framework to describing of test's logic and `PhantomJS` for running it in console. The tests are located in `js/tests` foulder.
 
-The results looks like follow 
+The results looks like following
 
 ![alt tag](https://github.com/ssergienko/marionette-github_tracker/blob/master/img/Screenshot2.png)
 
