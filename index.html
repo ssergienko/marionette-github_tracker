@@ -60,15 +60,25 @@
         </div>
     </script>
     <script type="text/template" id="forkTemplate">
-        <div class="list-group-item" target="_blank">
-            <a href="<%=html_url%>">
-                <h4 class="list-group-item-heading"><%=full_name%></h4>
-            </a>
+        <div class="list-group-item card" target="_blank">
+            <div class="forks-title">
+                <a href="<%=html_url%>">
+                    <h4 class="list-group-item-heading"><%=full_name%></h4>
+                </a>
+            </div>
             <div class="description-area">
-                <div class="list-group-item-text float-left"><%=description%></div>
-                <span class="badge float-right starring">
+                <div class="float-left">
+                    <div class="list-group-item-text"><%=description%></div>
+                    <br/>
+                    <div class="list-group-item-text"><strong>Owner:</strong> <a href="<%=owner.html_url%>"><%=owner.login%></a></div>
+                    <div class="list-group-item-text"><strong>Privacy:</strong> <%=private ? 'private' : 'public'%></div>
+                    <div class="list-group-item-text"><strong>Language:</strong> <%=language%></div>
+                    <div class="list-group-item-text"><strong>Created:</strong> <%=created_at%></div>
+                    <div class="list-group-item-text"><strong>Last update:</strong> <%=updated_at%></div>
+                </div>
+                <div class="badge float-right starring">
                     <i class="fa fa-star" id="star"> Star</i>
-                </span>
+                </div>
             </div>
         </div>
     </script>
