@@ -30,7 +30,7 @@ I didn't thought a lot about markup. I've used `Bootstrap` for this. It is fast,
 
 Sass allow to create awesome logic constructions within the front-end applications. It is very handy, but in this particular applicaton it wasn't necessary to use it. Here it's like an area for extensibility.
 
-#Tests
+#Unit testing
 
 I created a structure for covering the javascript logic by `Unit Tests` and simple examples of using it. Has been used `Jasmin` framework to describing of test's logic and `PhantomJS` for running it in console. The tests are located in `js/tests` foulder.
 
