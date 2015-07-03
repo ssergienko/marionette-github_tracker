@@ -1,3 +1,5 @@
+You can see an application here - http://github.way2day.ru/
+
 # Marionette github tracker
 
 This application represents a example of Marionette application. The app works with GitHub, using API v3. It showes two lists: contributers and forks of "backbone.marionette" repository (https://github.com/marionettejs/backbone.marionette). Users are able to switch between the lists using simple menu in sidebar.
