@@ -18,6 +18,10 @@ I've used one main scope for the application - GithhubApp scope in which have be
 
 All static data for authorisation and some app setting are located in `config.js` file
 
+# Wrok with Github API
+
+I've used GithubAPI plugin (https://github.com/michael/github) for this. Finding, that is can't work with starring of repositories, I've desided to extend it. So, now the plugin connects user, gets repo, and does work with starring of forks. Preparing pull request for the master repo.
+
 #CoffeScript
 
 Coffeescript is powerful and pleasure tool for development, in my opinion. I used it for describing of javascript login of a site.
