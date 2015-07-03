@@ -1,4 +1,4 @@
-You can see an application here - http://github.way2day.ru/
+You can see the application here - http://github.way2day.ru/
 
 # Marionette github tracker
 
