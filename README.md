@@ -22,6 +22,10 @@ All static data for authorisation and some app setting are located in `config.js
 
 Coffeescript is powerful and pleasure tool for development, in my opinion. I used it for describing of javascript login of a site.
 
+Result:
+
+![alt tag](https://github.com/ssergienko/marionette-github_tracker/blob/master/img/Screenshot1.png)
+
 # Bootstrap
 
 I didn't thought a lot about markup. I've used `Bootstrap` for this. It is fast, crossbrowsery and multydevicing. I used `bootstrap-theme.css` for main markup and `http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css` for specific simbols like star and etc.
@@ -34,9 +38,15 @@ Sass allow to create awesome logic constructions within the front-end applicatio
 
 I created a structure for covering the javascript logic by `Unit Tests` and simple examples of using it. Has been used `Jasmin` framework to describing of test's logic and `PhantomJS` for running it in console. The tests are located in `js/tests` foulder.
 
+The results looks like follow 
+
+![alt tag](https://github.com/ssergienko/marionette-github_tracker/blob/master/img/Screenshot2.png)
+
+Actually the PhantomeJS is able to create super nice html reports. It'll be added in a next version (:
+
 #Grunt
 
-Grunt is an instrument alowes to make a plan of tasks and walk through it automatically. My `Grantfile.js` do following:
+Grunt is an instrument alowes to make a plan of tasks and walk through it automatically. My `Gruntfile.js` does following:
 
 ```
 1. runs COFFEE compiler in order to create .js files form .coffee files
