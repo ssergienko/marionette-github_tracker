@@ -8,7 +8,7 @@ List of contributers displays nice pictures of the people who comunicate in the 
 
 List of froks showes repositories which were branched from this one. You can see simple cards in a list with some information. By clicking on a fork's name, opens fork's page. You are also able to star/unstar the particular fork by clicking on a star icon in a right of the card.
 
-#MarionetteMVC
+#Marionette MVC
 
 The applisation has been built on a Backbone.Marionette framework. I've used classical MVC structure for UI logic. Getting data from Github API is located in Models, biseness logic, connecting data and markup is located in Controllers, and in Views described mapping of the data to the html DOM.
 
@@ -18,15 +18,23 @@ I've used one main scope for the application - GithhubApp scope in which have be
 
 All static data for authorisation and some app setting are located in `config.js` file
 
-#CoffeScript
+# Work with Github API
+
+I've used GithubAPI plugin (https://github.com/michael/github) for this. Finding, that is can't work with starring of repositories, I've desided to extend it. So, now the plugin connects user, gets repo, and does work with starring of forks. Preparing pull request for the master repo.
+
+#CoffeeScript
 
 Coffeescript is powerful and pleasure tool for development, in my opinion. I used it for describing of javascript login of a site.
+
+Result:
+
+![alt tag](https://github.com/ssergienko/marionette-github_tracker/blob/master/img/Screenshot1.png)
 
 # Bootstrap
 
 I didn't thought a lot about markup. I've used `Bootstrap` for this. It is fast, crossbrowsery and multydevicing. I used `bootstrap-theme.css` for main markup and `http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css` for specific simbols like star and etc.
 
-#Less/Sass
+#Styles
 
 Sass allow to create awesome logic constructions within the front-end applications. It is very handy, but in this particular applicaton it wasn't necessary to use it. Here it's like an area for extensibility.
 
@@ -34,9 +42,15 @@ Sass allow to create awesome logic constructions within the front-end applicatio
 
 I created a structure for covering the javascript logic by `Unit Tests` and simple examples of using it. Has been used `Jasmin` framework to describing of test's logic and `PhantomJS` for running it in console. The tests are located in `js/tests` foulder.
 
+The results looks like following
+
+![alt tag](https://github.com/ssergienko/marionette-github_tracker/blob/master/img/Screenshot2.png)
+
+Actually the PhantomeJS is able to create super nice html reports. It'll be added in a next version (:
+
 #Grunt
 
-Grunt is an instrument alowes to make a plan of tasks and walk through it automatically. My `Grantfile.js` do following:
+Grunt is an instrument alowes to make a plan of tasks and walk through it automatically. My `Gruntfile.js` does following:
 
 ```
 1. runs COFFEE compiler in order to create .js files form .coffee files
