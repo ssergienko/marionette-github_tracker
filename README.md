@@ -36,7 +36,7 @@ I didn't thought a lot about markup. I've used `Bootstrap` for this. It is fast,
 
 #Styles
 
-Sass allow to create awesome logic constructions within the front-end applications. It is very handy, but in this particular applicaton it wasn't necessary to use it. Here it's like an area for extensibility.
+`Sass` allows to create awesome logic constructions within the front-end applications. It is very handy, but in this particular applicaton it wasn't necessary to use it. Here it's like an area for extensibility.
 
 #Unit testing
 
